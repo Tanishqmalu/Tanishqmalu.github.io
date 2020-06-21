@@ -296,6 +296,7 @@ header .header-pro{
 }
 /******************************************************************************/
 footer{
+  bottom: 0;
   width: 100%;
   background-color: #111;
   margin-top: 20px;
@@ -340,8 +341,6 @@ margin-top: 10px;
   display: none;
 }
 .img-info {
-
-
   text-align: justify;
 }
 
@@ -365,11 +364,8 @@ margin-top: 10px;
 
 .img-me {
   width: 100%;
-  height: 400px;
-
-
+  height: 300px;
   padding-top: 10px;
-
   padding-bottom: 10px;
 }
 .overlay{
@@ -391,22 +387,12 @@ margin-top: 10px;
     width: 100%;
   }
   .img-info h2 {
-    width: 100%;
-
-    font-family: arial;
-    font-size: 44px;
-    color: #111;
-    line-height: 44px;
-
     padding: 20px 0px 0px;
 
   }
   .img-info p {
     width: 100%;
 
-    font-family: arial;
-    font-size: 20px;
-    color: #111;
     line-height: 24px;
 
     padding: 20px 0px 0px;
@@ -466,6 +452,7 @@ margin-top: 10px;
 
   }
   .img-me {
+    height:calc(100vh - 100px);
     width: 50%;
     float: left;
 
@@ -495,6 +482,7 @@ margin-top: 10px;
 
 }
 .main-back-blog{
+
   background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("11.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -502,10 +490,11 @@ margin-top: 10px;
 }
 
 .main-back-pro{
+  width: 100%;
   height: calc(100vh - 100px);
   background-image: url("ach.png");
   background-repeat: no-repeat;
   background-position: center;
  background-size: cover;
- width: 100%;
+
 }
