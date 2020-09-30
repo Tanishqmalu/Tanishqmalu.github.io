@@ -1,4 +1,4 @@
 # Tanishqmalu.github.io
-Portfolio
+Own Portfolio
 My first website.
-Responsive html css javascript enabled.
+Responsive for mobiles tablets and laptops,html css javascript enabled.
