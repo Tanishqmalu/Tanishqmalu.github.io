@@ -126,43 +126,34 @@
         <div class="box">
 
                 <div class="box-in">
-                  <div class="counter" data-target="2600">0</div>
+                  <div class="counter" data-target="1691">0</div>
                 </div>
                 <div class="box-in-in">
-                  <p><center>No. of<br> followers</center></p>
+                  <p><center>Codechef<br> Rating</center></p>
                 </div>
 
         </div>
         <div class="box">
 
                 <div class="box-in">
-                  <div class="counter" data-target="2">0</div>
+                  <div class="counter" data-target="2523">0</div>
                 </div>
                 <div class="box-in-in">
-                  <p><center>Projects<br> completed</center></p>
+                  <p><center>JEE Advanced<br>Ranking</center></p>
                 </div>
 
         </div>
         <div class="box">
 
                 <div class="box-in">
-                  <div class="counter" data-target="5">0</div>
+                  <div class="counter" data-target="9.3">0</div>
                 </div>
                 <div class="box-in-in">
-                  <p><center><wrap>Entrance<br> exams</wrap></center></p>
+                  <p><center><wrap>Current<br>CPI</wrap></center></p>
                 </div>
 
         </div>
-        <div class="box">
-
-                <div class="box-in">
-                  <div class="counter" data-target="400">0</div>
-                </div>
-                <div class="box-in-in">
-                  <p><center>No. of<br> awards</center></p>
-                </div>
-
-        </div>
+        
       </div>
     <footer>
       <ul>
@@ -188,7 +179,7 @@
           const count = +counter.innerText;
           const inc = target / speed;
           if(count<target){
-            counter.innerText = Math.ceil(count+inc);
+            counter.innerText = (count+inc);
             setTimeout(updateCount,1);
           }
           else{
