@@ -48,7 +48,7 @@
 			</div>
 			<br><br>
 			<div>
-				<h1 id="hbd"></h1>
+				<h1 id="hbd" style="color: red;"></h1>
 			</div>
 		</div>
 
@@ -268,6 +268,16 @@
 			//go to " http://momentjs.com/timezone/ " to get timezone
 
 		});
+
+	</script>
+	<script>
+
+		var currentTime = new Date();
+		var dat=currentTime.getDate();
+		var mess=document.getElementById('hbd');
+    if(dat>=21)
+		mess.innerText=" HAPPY BIRTHDAY TARU !!";
+
 
 	</script>
 <!--===============================================================================================-->
