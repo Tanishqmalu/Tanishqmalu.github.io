@@ -198,7 +198,7 @@ function animate() {
     if(ticker % randomSpawnRate == 0){
         const radius = 9
         const x = Math.max(radius, Math.random() * canvas.width - radius)
-        stars.push(new Star(x, -100, 9, '#E3EAEF'))
+        stars.push(new Star(x, -100, 9, '#FF6666'))
         randomSpawnRate = Math.floor(Math.random() * (200 - 125 + 1) + 125)
     }
 
