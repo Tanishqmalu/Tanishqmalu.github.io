@@ -17,7 +17,7 @@ function showImage(){
 function play(){
 	if(t == 0){
 		myImage.setAttribute("src", "pic/heart.png");
-		myTxt.innerHTML = "";
+		myTxt.innerHTML = "Happy 2nd Anniversary !!";
 		imageIndex = 0;
 		clearInterval(showImageInterval);
 	}
