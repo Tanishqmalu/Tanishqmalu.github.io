@@ -141,18 +141,14 @@ body {
 @media only screen and (max-width: 600px) {
     .navbar-nav > li{
         font-size: 15px;
-        font-weight: 600;
     }
 }
 
 /* Small devices (portrait tablets and large phones, Between 600px - 768px) */
 @media only screen and (max-width: 768px) {
-
-}
-
-/* Medium devices (landscape tablets, 768px - 992px) */
-@media only screen and (max-width: 992px) {
-
+    .navbar-nav > li{
+        font-size: 20px;
+    }
 }
 
 
@@ -478,6 +474,7 @@ section {
   .subscribeButton{
     text-align: left;
   }
+
   @media screen and (max-width: 768px) {
     .contactBrand{
         margin-top: 10px;
@@ -490,6 +487,32 @@ section {
       }
       .contactSubscribe{
         text-align: center;
+      }
+
+      .contact .textBanner{
+        text-align: center;
+      }
+
+  }
+  @media screen and (min-width:769px) and (max-width: 992px) {
+    .contactBrand{
+        margin-top: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-right-style: none;
+        text-align: center;
+      }
+      .contactSubscribe{
+        text-align: center;
+      }
+
+      .contact .textBanner{
+        text-align: center;
+      }
+      .subscribeRow{
+        transform: translate(8.3%,50%);
       }
 
   }
