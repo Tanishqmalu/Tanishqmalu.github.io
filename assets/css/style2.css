@@ -126,10 +126,14 @@ body {
     box-shadow: 0 8px 6px -6px #999;
 }
 
+.navbarBrandImage{
+    height: 80px;
+}
+
 .navbar-nav > li{
-    padding-left:20px;
-    padding-right:20px;
-    font-size: 25px;
+    padding-left:15px;
+    padding-right:15px;
+    font-size: 20px;
     font-weight: 600;
 }
 .navbar-nav > li .btn{
@@ -142,15 +146,26 @@ body {
     .navbar-nav > li{
         font-size: 15px;
     }
-}
-
-/* Small devices (portrait tablets and large phones, Between 600px - 768px) */
-@media only screen and (max-width: 768px) {
-    .navbar-nav > li{
-        font-size: 20px;
+    .navbarBrandImage{
+        height: 60px;
     }
 }
 
+/* Small devices (portrait tablets and large phones, Between 600px - 768px) */
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+    .navbarBrandImage{
+        height: 60px;
+    }
+}
+
+/* Large device (portrait tablets and large phones, Between 992px - 1100px) */
+@media only screen and (max-width: 1100px) and (min-width: 992px) {
+    .navbar-nav > li{
+        font-size: 20px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
 
   /*--------------------------------------------------------------
   # Hero Section
@@ -198,7 +213,7 @@ body {
     text-shadow: 2px 2px 4px #000000;
   }
 
-  .container-fluid{
+  .containerContentData{
     margin-top: 20px;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -210,6 +225,32 @@ body {
     box-shadow: 5px 10px 8px 0px #888888;
     min-height: calc(100vh - 120px); /*Keep spcae before and after '-' sign*/
   }
+
+.containerVideoData{
+    min-height: calc(100vh - 120px);
+    width: 100%;
+}
+
+.containerVideoData > .row > video {
+    min-height: calc(100vh - 120px);
+    object-fit: cover;
+}
+
+/* Small devices (portrait tablets and large phones, Between 600px - 768px) */
+/* @media only screen and (max-width: 768px) and (min-width: 601px) {
+    .navbarBrandImage{
+        height: 60px;
+    }
+} */
+
+/* Large device (portrait tablets and large phones, Between 992px - 1100px) */
+/* @media only screen and (max-width: 1100px) and (min-width: 992px) {
+    .navbar-nav > li{
+        font-size: 20px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+} */
 
 .gamePage1Content{
     margin-top: 100px;

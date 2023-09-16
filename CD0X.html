@@ -40,50 +40,6 @@
      .btnn:focus{
         outline: none;       
      } 
-     .card {
-    background-color: #fff;
-    background-clip: border-box;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(96, 134, 181, .3);
-    margin-top: 20px;
-    text-align: center;
-}
-
-.card_body {
-    font-size: 0;
-    padding: 1.25rem;
-}
-
-.card_title {
-    font-size: 2rem;
-    margin: 0 0 .75rem;
-}
-
-.countdown_section {
-    display: inline-block;
-    margin-left: 4px;
-}
-
-.countdown_section:first-child {
-    margin-left: 0;
-}
-
-.countdown_section .value {
-    background-color: #333;
-    border-radius: 10px;
-    font-size: 50px;
-    color: #ffc107;
-    line-height: 100px;
-    text-align: center;
-    height: 100px;
-    width: 100px;
-}
-
-.countdown_label {
-    font-size: 11px;
-    padding-top: 4px;
-    text-align: center;
-}
   </style>
 </head>
 
@@ -91,7 +47,7 @@
 
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="assets/img/CDX.png"  height="80" class="d-inline-block align-top" alt="">
+            <img src="assets/img/CDX.png" class="navbarBrandImage"class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -124,17 +80,43 @@
         </ul>
         </div>
     </nav>
-    <div id="intro" class="bg-image vh-100 shadow-1-strong">
+    <div class="container-fluid containerVideoData">
+        <div class="row">
+            <video id="vid" autoplay="true" muted="muted" loop >
+                <source  src="assets/video/hero3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+    </div>
+    <!-- <div id="intro" class="bg-image vh-100 shadow-1-strong">
         <video style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
           <source class="h-100" src="assets/video/hero3.mp4" type="video/mp4" />
         </video>
         <div class="mask" style="background: linear-gradient(45deg,rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);">
         </div>
       </div>
+      <div class="heroVideo">
+        <video id="vid" autoplay="true" muted="muted" loop >
+            <source  src="assets/video/hero3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
+        <div class="hero-banner">
+            <h4 class="text-center">BATTLE FOR POLYGON</h4>
+            <h5 class="text-center">Welcome to OxCricketBattle</h5>
+            <h4 class="text-center" style="background-color: #414BB2;">Pre-Book The Early Access Now!</h4>
+   
+          </div>
+
+        <button class="btnn" id="mute" data-state="mute">
+            <i class="bi bi-volume-mute" style="color: white; font-size: 80px;"></i>
+        </button>
+
+    </div> -->
   <main id="main">
         
-        <div class="container-fluid" data-aos="fade-up">
+        <div class="container-fluid containerContentData" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-4">
                     <img src="assets/img/NFT.png" height="75%" class="d-inline-block align-top" class="img-fluid" alt="">
@@ -212,7 +194,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid" data-aos="fade-up">
+        <div class="container-fluid containerContentData" data-aos="fade-up">
             <div class="row">
                 <div class=" col-lg-8 pt-4 pt-lg-0 content">
                     <div class="col-lg-8 pt-4 pt-lg-0 gamePage2Content">
@@ -230,7 +212,7 @@
                 
             </div>
         </div>
-        <div class="container-fluid" data-aos="fade-up">
+        <div class="container-fluid containerContentData" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-4">
                     <img src="assets/img/game2.png" class="img-fluid" alt="">
@@ -247,7 +229,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid" data-aos="fade-up">
+        <div class="container-fluid containerContentData" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-8 pt-4 pt-lg-0 content">
                     <h3 class="text-center">INTRODUCING EARLY ACCESS NFT</h3>
