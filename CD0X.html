@@ -28,29 +28,224 @@
   <link href="assets/css/style2.css" rel="stylesheet">
   <style>
 
-    #mute {
-        position:absolute; bottom:20px; right:20px
-    }
-    .btnn{
-        cursor: pointer;
-        border: none;
-        outline: none;
-        background: none;  
-     }
-     .btnn:focus{
-        outline: none;       
-     } 
+    
+     
+.skew-c{
+  width:100%;
+  height:100px;
+  position:relative;
+  margin-top: -100px;
+  left:0px;
+  z-index: 100;
+  background: linear-gradient(to left bottom, rgb(255, 255, 255, 0) 49%, rgb(24,20,26) 50%);
+}
+
+
+.has-section-divider1 {
+    margin-top: -7%;
+    z-index: 8;
+    margin-bottom: -50px;
+    /* margin-bottom: 5%; */
+    /* background-clip: content-box; */
+    
+    /* background-color: rgb(24,20,26); Used if the image is unavailable */
+    /* height: 500px; You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    /* color: #823A9C; */
+    /* position: relative; */
+  
+    padding-bottom: calc(100% * ((60)/(1920)));
+}
+.cont1{
+    z-index: 8;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background-image: url("11.jpg"); /*The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    clip-path: polygon(0% 5%, 10% 0%, 25% 9%, 30% 10%, 98% 5%, 65% 2%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+        
+    /* background-color: #f0a09d !important; */
+}
+.has-section-divider2 {
+    margin-top: -20%;
+    z-index: 6;
+    margin-bottom: -50px;
+    /* margin-bottom: 5%; */
+    /* background-clip: content-box; */
+    
+    /* background-color: rgb(24,20,26); Used if the image is unavailable */
+    /* height: 500px; You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+    /* color: #823A9C; */
+    /* position: relative; */
+  
+    padding-bottom: calc(100% * ((60)/(1920)));
+}
+.cont2{
+    z-index: 6;
+    padding-top: 30%;
+    padding-bottom: 20%;
+    background-image: url("3.jpg"); /*The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    clip-path: polygon(0% 5%, 10% 0%, 25% 9%, 30% 10%, 98% 5%, 65% 2%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+        
+    /* background-color: #f0a09d !important; */
+}
+.has-section-divider3 {
+    margin-top: -20%;
+    z-index: 4;
+    margin-bottom: -50px;
+    
+}
+.cont3{
+    padding-top: 20%;
+    z-index: 4;
+    
+}
+.section-divider {
+  display: block;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: auto;
+}
+
+.cont4{
+    /* margin-top: -20%; */
+    height:500px;
+    padding-top: 250px;
+    padding-bottom: 50px;
+    z-index: 2;
+    background-color: #2E244E !important;
+    clip-path: path("M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z");
+
+}
+.cont5{
+    padding-top: 50px;
+    z-index: 4;
+    background-color: #2E244E !important;
+}
+.bgim{
+    /* background-image: url("1.jpg"); */
+    height: 800px;
+    /* background-position: center; Center the image */
+    /* background-repeat: no-repeat; Do not repeat the image */
+    /* background-size: cover;  */
+}
+.clipped {
+  clip-path: url(#blob);
+}
+.ccc{
+    background-color: #f55434;
+    margin-bottom: -50px;
+}
+.bookings{
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #EBB908,
+      0 0 82px #EBB908,
+      0 0 92px #EBB908,
+      0 0 102px #EBB908,
+      0 0 151px #EBB908;
+      animation: flicker 1.5s infinite alternate;     
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+.nftbanner{
+    
+    transform-style: preserve-3d;
+  transition: transform 1s;
+    animation: turner 10s infinite;
+  transition: 0.5s;
+  
+}
+.nftbanner img{
+    filter: drop-shadow(10px 10px 20px #0fa);
+    /* box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255,255,255,0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5); */
+}
+
+@keyframes turner{
+  0%   { transform:rotateY(-30deg); }
+  10%   { transform:rotateY(-30deg); }
+  50% { transform:rotateY(30deg);}
+  55% { transform:rotateY(30deg);}
+  75% { transform:rotateY(0deg);}
+  100% { transform:rotateY(-30deg);}
+}
+.root {
+    z-index: 100;
+
+        margin-top: -100px;
+          position: relative;
+          width:100%;
+          height: calc(100vh);
+          /* clip-path: polygon(0% 80%, 0% 0%, 100% 0%, 100% 80%, 50% 100%); */
+          clip-path: polygon(0% 5%, 10% 0%, 25% 9%, 30% 10%, 98% 5%, 65% 2%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+        }
+        .bottomBorder {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: #e9bf37;
+          clip-path: polygon(0% 80%, 0% 78%, 50% 95%, 100% 78%, 100% 80%, 50% 100%);
+        }
+        .image {
+          object-fit: contain;
+          width: 100%;
+        }
   </style>
 </head>
 
 <body>
 
+    <!-- Navbar Begins -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="assets/img/CDX.png" class="navbarBrandImage"class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <input type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden">
+            <label for="checkbox2">
+                <div class="hamburger hamburger2">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                    <span class="bar bar4"></span>
+                </div>
+            </label>
+            <!-- <span class="navbar-toggler-icon"></span> -->
         </button>
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -80,15 +275,21 @@
         </ul>
         </div>
     </nav>
-    <div class="container-fluid containerVideoData">
+    <!-- Navbar Ends -->
+    <!-- Hero Section Begins -->
+    <div class="container-fluid containerVideoData ">
         <div class="row">
             <video id="vid" autoplay="true" muted="muted" loop >
                 <source  src="assets/video/hero3.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        
+        <button id="muteButton" data-state="mute">
+            <i class="bi bi-volume-mute"></i>
+        </button>
     </div>
+    <!-- Hero Section Ends -->
+
     <!-- <div id="intro" class="bg-image vh-100 shadow-1-strong">
         <video style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
           <source class="h-100" src="assets/video/hero3.mp4" type="video/mp4" />
@@ -114,16 +315,17 @@
         </button>
 
     </div> -->
-  <main id="main">
-        
-        <div class="container-fluid containerContentData" data-aos="fade-up">
+  <main id="main">  
+    <div data-aos="fade-up bgim">
+        <div class="skew-c"></div>
+        <div class="container-fluid containerContentData" >
             <div class="row">
-                <div class="col-lg-4">
-                    <img src="assets/img/NFT.png" height="75%" class="d-inline-block align-top" class="img-fluid" alt="">
+                <div class="col-lg-4 nftbanner">                    
+                    <img src="assets/img/NFT.png" height="75%" class="d-inline-block align-top" class="img-fluid " alt="">
                 </div>
                 <div class="col-lg-8 pt-4 pt-lg-0 gamePage1Content">
                     <p class="text-center" style="font-size: 40px; font-weight: 600;">INTRODUCING EARLY ACCESS NFT</p>
-                    <p class="text-center" style="font-size: 20px; font-weight: 400;"> These NFT have what it takes to begin your journey in the verse of CDX. Get the tokens now to earn exclusive rewards by playing the game.</p>
+                    <p class="text-center" style="font-size: 20px; font-weight: 400;"> Cricket lovers, enthusiasts, and thrill-seekers, the moment you've all been waiting for is here! Prepare to be bowled over by the most revolutionary cricket experience ever created - our Web3 Cricket NFT Game - and secure your exclusive Early Access NFT Game Pass!</p>
                     <p class="bookings">PRE-BOOK BEGINS IN:</p>
                     <div class="row"  >
                         <!-- <div class="col-1" style="background-color: red;">1</div>
@@ -194,42 +396,84 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid containerContentData" data-aos="fade-up">
-            <div class="row">
-                <div class=" col-lg-8 pt-4 pt-lg-0 content">
-                    <div class="col-lg-8 pt-4 pt-lg-0 gamePage2Content">
-                        <p class="text-center" style="font-size: 40px; font-weight: 600;">GamePlay</p>
-                        <p class="text-center" style="font-size: 20px; font-weight: 400;">A decentralised studio building the world’s first Interoperable Blockchain Game (IBG) universe including an open-world exploration game, industrial city builder, and autobattler, all on the Ethereum blockchain.
+    </div>
+    <!-- <div class="root">
+        <img class="image" src="1.jpg" />        
+        <div class="bottomBorder" ></div>
+      </div> -->
 
-                            Join a graphically-rich sci-fi adventure, explore 7 dazzling alien landscapes and conquer the wilderness to uncover the cataclysmic events that shattered Illuvium and help your crash-landed crew flourish!</p>
-    
-                    </div>    
+    <div class="container-fluid has-section-divider1" >
+        <div class="row">
+            <!-- <svg class="section-divider" viewBox="0 0 1920 60" aria-hidden="true"><path fill="#f0a09d" d="M0,80.75H1920V45.833H1742.083a80.491,80.491,0,0,1,12.863-1.55c5.2-.26,17.24-.3,24.153-.24,26.69.222,54.377,1.094,79.341.96,19.287-.1,37.1-.372,53.573-.788L1920,44V34.078l-6.614.216-9.221.256c-6.252.147-12.7.249-19.265.32-13.132.14-26.739.15-40.206.125-26.935-.052-53.313-.247-74.22.168-14.367-1.4-32.582-.756-48.293-1.92-10.145.509-20.876.936-24.149,2.4-16.09-.266-37.611,2.532-50.019.479V34.684c-10.959-2.291-33.371-1.869-48.292-3.84-15.861-.512-26.214,1.347-39.671,1.92-7.032.178-5.941-.773-13.8-.481-40.751-.071-41.131,5.477-62.087,8.16-4.569-5.691-47.085-5.126-77.622-5.04-2.333-4.154-22.643-5.808-50.015-6.479-4.677-2.069-17.763-2.969-22.423-5.04-4.7-.175-3.474.477-6.9.479-11.485-2.964-40.092-2.449-63.813-3.36-23.312.6-29.4,3.589-55.195,3.841-8.3-3.783-56.5-4.561-84.513-3.361-.316-1.857-5.682-3.862-20.7-4.8-2.193-.137-6.78.122-10.352,0-16.331-.564-22.974-3.145-39.671-1.441-22.812-1.938-73.831-3.919-98.311-.719-4.315-2.2-15.369-3.462-20.7-5.521-23.122-.714-41.26-2.815-65.54-2.64-13.5,1-29.918,1.6-39.671,3.12.27,1.317-1.305,2.38-6.9,2.88-35.562-1.333-83.117-2.545-93.139,2.88-14.338-.314-8.341,2.2-22.423,1.92-5.17-.16-2.615-1.4-6.9-1.68-36.327-1.894-80.653-1.762-100.041,2.161-12.433-1.631-21.648-3.708-36.221-5.04-13.359.1-36.33-.325-48.293-1.2-32.483.6-42.463,4.331-53.471,7.92-25.227-.147-43.752,2.274-58.641,4.321-11.966-1.189-27.56-.426-39.67-1.441-19.514,1.284-40.772,2.328-53.468,4.561C301.584,31.04,294,33.888,283.7,37.8c-15.047-.774-19.865-3.5-36.221-4.321-10.453-.522-37.12-1.01-48.3-.959-10.184.046-17.188,1.062-27.595.719-18.244,2.022-31.516,4.736-46.57,7.2-3.726,2.091-9.8,3.854-17.5,5.39H4.061c-.734-1.281-1.512-2.592-2.344-3.949-.546-.09-1.13-.175-1.717-.26Z"/></svg> -->
+            <div class="container-fluid containerContentData cont1" >
+                <div class="row">
+                    <div class=" col-lg-8 pt-4 pt-lg-0 content">
+                        <div class="col-lg-8 pt-4 pt-lg-0 gamePage2Content">
+                            <p class="text-center" style="font-size: 40px; font-weight: 600;">GamePlay</p>
+                            <p class="text-center" style="font-size: 20px; font-weight: 400;">A decentralised studio building the world’s first Interoperable Blockchain Game (IBG) universe including an open-world exploration game, industrial city builder, and autobattler, all on the Ethereum blockchain.
+
+                                Join a graphically-rich sci-fi adventure, explore 7 dazzling alien landscapes and conquer the wilderness to uncover the cataclysmic events that shattered Illuvium and help your crash-landed crew flourish!</p>
+        
+                        </div>    
+                        
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="assets/img/game1.png" class="img-fluid" alt="">
+                    </div>
                     
                 </div>
-                <div class="col-lg-4">
-                    <img src="assets/img/game1.png" class="img-fluid" alt="">
-                </div>
-                
+                <div class="bottomBorder" ></div>
             </div>
         </div>
-        <div class="container-fluid containerContentData" data-aos="fade-up">
-            <div class="row">
-                <div class="col-lg-4">
-                    <img src="assets/img/game2.png" class="img-fluid" alt="">
-                </div>
-                <div class=" col-lg-8 pt-4 pt-lg-0">
-                    <div class="col-lg-8 pt-4 pt-lg-0 gamePage2Content">
-                        <p class="text-center" style="font-size: 40px; font-weight: 600;">GamePlay</p>
-                        <p class="text-center" style="font-size: 20px; font-weight: 400;">A decentralised studio building the world’s first Interoperable Blockchain Game (IBG) universe including an open-world exploration game, industrial city builder, and autobattler, all on the Ethereum blockchain.
-
-                            Join a graphically-rich sci-fi adventure, explore 7 dazzling alien landscapes and conquer the wilderness to uncover the cataclysmic events that shattered Illuvium and help your crash-landed crew flourish!</p>
+        
+    </div>
+    <div class="container-fluid has-section-divider2" >
+        <div class="row">
+            <div class="container-fluid containerContentData cont2" >
+                <div class="row">
+                    <div class="col-lg-8 pt-4 pt-lg-0 content">
+                        <h3 class="text-center">Gameplay</h3>
+                        <p class="text-center"> Join a graphically-rich sci-fi adventure, explore 7 dazzling alien landscapes and conquer the wilderness to uncover the cataclysmic events that shattered Illuvium and help your crash-landed crew flourish!</p>
+                    </p>
+                        <p>PRE-BOOK BEGINS IN:</p>
     
-                    </div>    
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="assets/img/game3.png" class="img-fluid" alt="">
+                    </div>
                     
                 </div>
+                <div class="bottomBorder" ></div>
             </div>
         </div>
-        <div class="container-fluid containerContentData" data-aos="fade-up">
+        <!-- <svg class="section-divider" viewBox="0 0 1920 60" aria-hidden="true"><path fill="#f0a09d" d="M0,80.75H1920V45.833H1742.083a80.491,80.491,0,0,1,12.863-1.55c5.2-.26,17.24-.3,24.153-.24,26.69.222,54.377,1.094,79.341.96,19.287-.1,37.1-.372,53.573-.788L1920,44V34.078l-6.614.216-9.221.256c-6.252.147-12.7.249-19.265.32-13.132.14-26.739.15-40.206.125-26.935-.052-53.313-.247-74.22.168-14.367-1.4-32.582-.756-48.293-1.92-10.145.509-20.876.936-24.149,2.4-16.09-.266-37.611,2.532-50.019.479V34.684c-10.959-2.291-33.371-1.869-48.292-3.84-15.861-.512-26.214,1.347-39.671,1.92-7.032.178-5.941-.773-13.8-.481-40.751-.071-41.131,5.477-62.087,8.16-4.569-5.691-47.085-5.126-77.622-5.04-2.333-4.154-22.643-5.808-50.015-6.479-4.677-2.069-17.763-2.969-22.423-5.04-4.7-.175-3.474.477-6.9.479-11.485-2.964-40.092-2.449-63.813-3.36-23.312.6-29.4,3.589-55.195,3.841-8.3-3.783-56.5-4.561-84.513-3.361-.316-1.857-5.682-3.862-20.7-4.8-2.193-.137-6.78.122-10.352,0-16.331-.564-22.974-3.145-39.671-1.441-22.812-1.938-73.831-3.919-98.311-.719-4.315-2.2-15.369-3.462-20.7-5.521-23.122-.714-41.26-2.815-65.54-2.64-13.5,1-29.918,1.6-39.671,3.12.27,1.317-1.305,2.38-6.9,2.88-35.562-1.333-83.117-2.545-93.139,2.88-14.338-.314-8.341,2.2-22.423,1.92-5.17-.16-2.615-1.4-6.9-1.68-36.327-1.894-80.653-1.762-100.041,2.161-12.433-1.631-21.648-3.708-36.221-5.04-13.359.1-36.33-.325-48.293-1.2-32.483.6-42.463,4.331-53.471,7.92-25.227-.147-43.752,2.274-58.641,4.321-11.966-1.189-27.56-.426-39.67-1.441-19.514,1.284-40.772,2.328-53.468,4.561C301.584,31.04,294,33.888,283.7,37.8c-15.047-.774-19.865-3.5-36.221-4.321-10.453-.522-37.12-1.01-48.3-.959-10.184.046-17.188,1.062-27.595.719-18.244,2.022-31.516,4.736-46.57,7.2-3.726,2.091-9.8,3.854-17.5,5.39H4.061c-.734-1.281-1.512-2.592-2.344-3.949-.546-.09-1.13-.175-1.717-.26Z"/></svg> -->
+        
+    </div>
+        
+    <div class=" container-fluid has-section-divider3" >
+        <div class="row">
+            <div class="container-fluid containerContentData cont3">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="assets/img/game2.png" class="img-fluid" alt="">
+                    </div>
+                    <div class=" col-lg-8 pt-4 pt-lg-0">
+                        <div class="col-lg-8 pt-4 pt-lg-0 gamePage2Content">
+                            <p class="text-center" style="font-size: 40px; font-weight: 600;">GamePlay</p>
+                            <p class="text-center" style="font-size: 20px; font-weight: 400;">A decentralised studio building the world’s first Interoperable Blockchain Game (IBG) universe including an open-world exploration game, industrial city builder, and autobattler, all on the Ethereum blockchain.
+    
+                                Join a graphically-rich sci-fi adventure, explore 7 dazzling alien landscapes and conquer the wilderness to uncover the cataclysmic events that shattered Illuvium and help your crash-landed crew flourish!</p>
+        
+                        </div>    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+      <!-- <div class="has-section-divider4" >
+        <div class="container-fluid containerContentData cont5">
             <div class="row">
                 <div class="col-lg-8 pt-4 pt-lg-0 content">
                     <h3 class="text-center">INTRODUCING EARLY ACCESS NFT</h3>
@@ -243,65 +487,781 @@
                 
             </div>
         </div>
-
+    </div> -->
+        <!-- <div class="root">
+            <img class="image" src="assets/img/game2.png" />
+            <div class="bottomBorder" ></div>
+          </div> -->
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Join Our Community</h2>
-        </div>
-        <div class="row mt-1">
-            <div class="col-lg-12">
-                <h4 class="text-center">
-                    Join Our Robust Community Of NFT Collectors, Metaverse Cricketers, & Top P2E Earners. Participate In Our Discord Discussions!
-                </h4>
-            </div>           
-        </div>
-        <div class="col-lg-12 social-links text center">
-            <a href="#" class="facebook"><i class="bi bi-discord"></i></a>
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="yotube"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="telegram"><i class="bi bi-telegram"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>           
-        </div>
-
-        <div class="row mt-3" style="min-height: 200px;">
-          <div class="col-lg-6 contactBrand">
-            <img src="assets/img/CDX.png" height="80" class="d-inline-block align-top" alt="">
-          </div>
-          <!-- <div class="col-lg-1 verticalLine"></div> -->
-          <div class="col-lg-6 mt-5 mt-lg-0 contactSubscribe">
-            <div class="row mt-1 ">
-                <div class="col-md-12 col-lg-12 textBanner">
-                    <h4>
-                        Stay updated with CDX
-                    </h4>
-                </div>           
-            </div>
-            <div role="form" class="php-email-form" id="contactUsForm">
-              <div class="row subscribeRow">
-                <div class="col-md-offset-1 col-md-6 col-lg-offset-1 col-lg-6 col-sm-12 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Email" required>
+    
+        
+    <div class="wrapperContact">
+        <div id="bgicon">
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
                 </div>
-                
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="col-md-4 col-lg-4 col-sm-12 subscribeButton">
-                <div class="text-center"><button type="submit" onclick="mailtoFunction()" class="mailMessageButton">Subscribe</button></div>
-              </div>
-              </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                </div>
+                <div>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
+                    <i class="bi bi-6-square-fill"></i>          
+                    <i class="bi bi-6-square"></i>
+                    <i class="bi bi-arrow-repeat"></i>
+                    <i class="bi bi-4-square-fill"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-4-square"></i>
+                    <i class="bi bi-6-circle-fill"></i>
+                    <i class="bi bi-arrows-move"></i>
+                    <i class="bi bi-6-circle"></i>
+                    <i class="bi bi-4-circle-fill"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-4-circle"></i>
 
-          </div>
-
+                </div>
+            </div>
+        
+            
+        </div>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Join Our Community</h2>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-lg-12">
+                        <h4 class="text-center">
+                            Join Our Robust Community Of NFT Collectors, Metaverse Cricketers, & Top P2E Earners. Participate In Our Discord Discussions!
+                        </h4>
+                    </div>           
+                </div>
+                <div class="col-lg-12 social-links text center">
+                    <a href="#" class="facebook"><i class="bi bi-discord"></i></a>
+                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="yotube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" class="telegram"><i class="bi bi-telegram"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>           
+                </div>
+    
+                <div class="row mt-3" style="min-height: 200px;">
+                    <div class="col-lg-6 contactBrand">
+                        <img src="assets/img/CDXinvert.png" height="80" class="d-inline-block align-top" alt="">
+                    </div>
+                    <!-- <div class="col-lg-1 verticalLine"></div> -->
+                    <div class="col-lg-6 mt-5 mt-lg-0 contactSubscribe">
+                        <div class="row mt-1 ">
+                            <div class="col-md-12 col-lg-12 textBanner">
+                                <h4>
+                                    Stay updated with CDX
+                                </h4>
+                            </div>           
+                        </div>
+                        <div role="form" class="php-email-form" id="contactUsForm">
+                            <div class="row subscribeRow">
+                                <div class="col-md-offset-1 col-md-6 col-lg-offset-1 col-lg-6 col-sm-12 form-group">
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Enter Your Email" required>
+                                </div>                        
+                                <div class="my-3">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                </div>
+                                <div class="col-md-4 col-lg-4 col-sm-12 subscribeButton">
+                                    <div class="text-center"><button type="submit" onclick="mailtoFunction()" class="mailMessageButton">Subscribe</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Contact Section -->
+        
         </div>
 
-      </div>
-    </section><!-- End Contact Section -->
+    
+   
+    
  
   </main><!-- End #main -->
 
@@ -337,27 +1297,32 @@
 </script>
 <script>
     let video = document.getElementById("vid");
-    const icon = document.querySelector("#mute > i");
+    const muteButton = document.querySelector("#muteButton > i");
     function changeButtonState(type) {
         if (type === "mute") {
             // Mute button
             if(video.muted == true){
-                icon.classList.remove("bi-volume-up");
-                icon.classList.add("bi-volume-mute");
-                mute.setAttribute("data-state", "false");
-                console.log("yes");
+                muteButton.classList.remove("bi-volume-up");
+                muteButton.classList.add("bi-volume-mute");
+                muteButton.setAttribute("data-state", "false");
             } else {
-                icon.classList.remove('bi-volume-mute');
-                icon.classList.add('bi-volume-up');
-                
-                mute.setAttribute("data-state", "true");
+                muteButton.classList.remove('bi-volume-mute');
+                muteButton.classList.add('bi-volume-up');                
+                muteButton.setAttribute("data-state", "true");
             }
             
         }
     }
     
-    mute.addEventListener("click", (e) => {
+    muteButton.addEventListener("click", (e) => {
         video.muted = !video.muted;
         changeButtonState("mute");
     });
 </script>
+<script>
+    var offsetHeight1 = document.getElementById('contact').offsetHeight;
+    document.getElementById("bgicon").style.height = offsetHeight1 + "px";
+</script>
+
+
+<img alt="" data-v-e68c2b22="" src="blob:https://www.sneakerheads.xyz/7eb04706-3a57-4178-b898-837b1395f4bd" style="transform: translate(0px, 0px);">

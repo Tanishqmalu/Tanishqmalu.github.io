@@ -46,8 +46,16 @@ body {
     background: #000000;
     width: 40px;
     height: 40px;
-    border-radius: 50px;
-    transition: all 0.4s;
+
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 1px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    animation: bounce2 2s ease infinite;
   }
   
   .back-to-top i {
@@ -56,17 +64,25 @@ body {
     line-height: 0;
   }
   
-  .back-to-top:hover {
-    background: #E6E6E6;
-    color: #000000;
+   .back-to-top:hover {
+    box-shadow: 1px 1px 24px rgba(14, 15, 14, 0.64);
+    transform: translateY(-6px);
+    background: #000000;
+    color: #ffffff;
   }
   .back-to-top:hover > i{
-    color: #000000;
+    color: #ffffff;
   }
   
   .back-to-top.active {
     visibility: visible;
     opacity: 1;
+  }
+
+  @keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-30px);}
+      60% {transform: translateY(-15px);}
   }
   
   /*--------------------------------------------------------------
@@ -141,6 +157,75 @@ body {
     color: #fff;
 }
 
+.visuallyHidden {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  outline: none;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: maroon;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute; 
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar1{
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2{
+  transform: rotate(45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar3{
+  transform: rotate(-45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar4{
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
 /* Extra Small devices (portrait tablets and large phones, 600px and low) */
 @media only screen and (max-width: 600px) {
     .navbar-nav > li{
@@ -168,10 +253,78 @@ body {
 }
 
   /*--------------------------------------------------------------
+  # Mute Button
+  --------------------------------------------------------------*/
+  
+
+#muteButton {
+  position:absolute; 
+  bottom:25px;
+  right:20px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none; 
+  display: inline-block;
+  background: #0563bb;
+  color: #000000;
+  border-radius: 100px;
+  box-shadow: 0 0 5px rgb(18, 147, 113);
+  /* animation: ripple 1.25s infinite cubic-bezier(0.66, 0, 0, 1); */
+  animation: ripple 1.25s 1.5s infinite cubic-bezier(0.66, 0, 0, 1), bounce-in-right 2s ease;
+  transition: 0.3s;
+}
+#muteButton i{
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+#muteButton i:hover::before{
+  transform: scale(1.2);
+  border-radius: 100px;
+  
+}
+
+#muteButton i:hover{
+  color: rgb(0, 0, 0);
+}
+
+
+@keyframes bounce-in-right {
+0% {
+opacity: 0;
+transform: translateX(200px);
+}
+60% {
+opacity: 1;
+transform: translateX(-30px);
+}
+80% { transform: translateX(10px); }
+100% { transform: translateX(0); }
+}
+
+#muteButton:focus{
+  outline: none;       
+}
+@keyframes ripple {
+0% {
+box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3),
+  0 0 0 1px rgba(0, 0, 0, 0.3),
+  0 0 0 3px rgba(0, 0, 0,0.3),
+  0 0 0 5px rgba(0, 0, 0, 0.3);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3),
+  0 0 0 4px rgba(0, 0, 0, 0.3),
+  0 0 0 20px rgba(0, 0, 0, 0),
+  0 0 0 30px rgba(0, 0, 0, 0);
+}
+}
+  /*--------------------------------------------------------------
   # Hero Section
   --------------------------------------------------------------*/
   
-  .heroVideo{
+  /* .heroVideo{
     font-color: black;
   }
 
@@ -184,13 +337,17 @@ body {
     right: 0;
     background: rgba(25, 15, 15, 0.8);
   }
+  */
+
   video {
     position: relative;
     width: 100%;
-    max-height: calc(100vh - 100px);
+    max-height: calc(100vh - 120px);
     object-fit: fill;  
     z-index: -10;
-  }
+  } 
+
+  
   
   .hero-banner{
     text-align: center;
@@ -214,43 +371,32 @@ body {
   }
 
   .containerContentData{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     padding-top: 50px;
     padding-bottom: 50px;
-    width: 95%;
+    width: 100%;
     padding-left: 100px;
     padding-right: 100px;
-    background-color: #E6E6E6;
-    border-radius: 20px 20px 20px 20px;
-    box-shadow: 5px 10px 8px 0px #888888;
+    
+    color: #fff;
+    position: relative;
+    background-color: rgb(24,20,26);
+    /* border-radius: 20px 20px 20px 20px; */
+    /* box-shadow: 5px 10px 8px 0px #888888; */
     min-height: calc(100vh - 120px); /*Keep spcae before and after '-' sign*/
   }
 
 .containerVideoData{
-    min-height: calc(100vh - 120px);
+   
+    min-height: calc(100vh - 0px);
     width: 100%;
 }
 
 .containerVideoData > .row > video {
     min-height: calc(100vh - 120px);
     object-fit: cover;
+    position: fixed;
 }
-
-/* Small devices (portrait tablets and large phones, Between 600px - 768px) */
-/* @media only screen and (max-width: 768px) and (min-width: 601px) {
-    .navbarBrandImage{
-        height: 60px;
-    }
-} */
-
-/* Large device (portrait tablets and large phones, Between 992px - 1100px) */
-/* @media only screen and (max-width: 1100px) and (min-width: 992px) {
-    .navbar-nav > li{
-        font-size: 20px;
-        padding-left:10px;
-        padding-right:10px;
-    }
-} */
 
 .gamePage1Content{
     margin-top: 100px;
@@ -267,7 +413,7 @@ body {
     font-size: 40px;
     font-weight: 600;
     text-align: center;
-    color: #EBB908;
+    color: #fff;
 }
 .timercol{
     color: white;
@@ -313,6 +459,7 @@ section {
   }
   
   .section-title {
+    padding-top: 20px;
     text-align: center;
     padding-bottom: 10px;
   }
@@ -324,7 +471,7 @@ section {
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
-    color: #45505b;
+    color: #ffffff;
   }
   
   .section-title h2::before {
@@ -357,15 +504,29 @@ section {
   /*--------------------------------------------------------------
   # Contact
   --------------------------------------------------------------*/
-  .contact .info {
-    width: 100%;
-    background: #fff;
-    margin-bottom: 20px;
+  .wrapperContact{
+    color: white;
+    /* margin-top: 30px; */
+    position: relative;
+   
   }
+ 
+  .contact{
+    
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+  }
+
 
   .contact .social-links {
     /* margin: 0 0 40px 0; */
     text-align: center;
+   
   }
   
   .contact .social-links a {
@@ -432,7 +593,7 @@ section {
   
   .contact .php-email-form {
     width: 100%;
-    background: #fff;
+    /* background: #fff; */
   }
   
   .contact .php-email-form .form-group {
@@ -569,4 +730,94 @@ section {
     }
   }
   
- 
+ /*
+  Footer Background
+ */
+ #bgicon{
+  position: relative;
+  width: 100%;
+
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+#bgicon .row{
+  position: relative;
+  
+  width: 100%;
+  display: flex;
+  padding: 20px 0;
+  white-space: nowrap;
+  font-size: 40px;
+  transform: rotate(-30deg);
+  transform-origin: 50px 50px;
+}
+#bgicon i{
+  line-height: 1;
+  transition: 1s ;
+  /* padding: 0 5px; */
+  color: rgba(0, 0, 0, 0.5);
+  user-select: none;
+  cursor: default;
+}
+#bgicon i:hover{
+  transition: 0s;
+  color: #0f0;
+  text-shadow: 0px 0px 120px #0f0;
+}
+#bgicon .row div{
+
+  animation: animate1 20s linear infinite;
+  animation-delay: -40s;
+}
+#bgicon .row div:nth-child(2){
+
+animation: animate2 20s linear infinite;
+animation-delay: -20s;
+}
+
+@keyframes animate1 {
+  from {
+      transform: translateX(calc(100% + 10px));
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+@keyframes animate2 {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-200%);
+  }
+}
+#bgicon .row:nth-child(even) div{
+
+animation: animate3 20s linear infinite;
+animation-delay: -40s;
+}
+#bgicon .row:nth-child(even) div:nth-child(2){
+
+animation: animate4 20s linear infinite;
+animation-delay: -20s;
+}
+
+@keyframes animate3 {
+0% {
+transform: translateX(-100%);
+}
+100% {
+transform: translateX(100%);
+}
+}
+@keyframes animate4 {
+0% {
+transform: translateX(-200%);
+}
+100% {
+transform: translateX(0%);
+}
+}
