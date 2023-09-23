@@ -1,0 +1,318 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+html{
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+  }
+body {
+    font-family: "Open Sans", sans-serif;
+
+  }
+
+  a {
+    color: #0563bb;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #067ded;
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+
+  /*--------------------------------------------------------------
+  # Mouse Cursor
+  --------------------------------------------------------------*/
+  .circle-cursor {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+  }
+  .circle-cursor--outer {
+    pointer-events: none;
+    border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      border: 1px solid white;
+      z-index: 100;
+      background: white;
+      box-shadow: 0 0 100px 70px rgb(255, 243, 243);
+      opacity: 0.7;
+      transition: 0.1s;
+      transition-timing-function: ease;
+      mix-blend-mode: overlay;
+    }
+  
+    /* .circle-cursor--inner {
+        
+        pointer-events: none;
+        border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      left: -2.5px;
+      top: -2.5px;
+      z-index: 150;
+     
+    } */
+    .svgDiv{
+        position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+       
+      }
+     
+      svg path {
+        z-index: 200;
+        border-top: 1px dotted black;
+        border-bottom: 1px dotted black;
+      }
+      
+      .text {
+       
+        font-weight: 600;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        font-family: 'Kanit';
+        font-size: 10px;
+        fill: #111;
+        text-shadow: 2px 0px #ccc;
+      }
+    
+      #rotatingText {
+        animation-name: rotate-circle;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+    
+      @keyframes rotate-circle {
+        to {
+          transform: rotate(1turn);
+        }
+      }
+  /*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 1000;
+    background: #000000;
+    width: 40px;
+    height: 40px;
+
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 1px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    animation: bounce2 2s ease infinite;
+  }
+  
+  .back-to-top i {
+    font-size: 28px;
+    color: #ffffff;
+    line-height: 0;
+  }
+  
+   .back-to-top:hover {
+    box-shadow: 1px 1px 24px rgba(14, 15, 14, 0.64);
+    transform: translateY(-6px);
+    background: #000000;
+    color: #ffffff;
+  }
+  .back-to-top:hover > i{
+    color: #ffffff;
+  }
+  
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @keyframes bounce2 {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-30px);}
+      60% {transform: translateY(-15px);}
+  }
+  
+  /*--------------------------------------------------------------
+  # Navbar
+  --------------------------------------------------------------*/
+  .navbar{
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.navbarBrandImage{
+    height: 80px;
+}
+
+.navbar-nav > li{
+    padding-left:15px;
+    padding-right:15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.navbar-nav > li .btn{
+    background-color: #414BB2;
+    color: #fff;
+}
+
+.visuallyHidden {
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+.hamburger {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  outline: none;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 4px;
+  background-color: maroon;
+  display: block;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+  position: absolute; 
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 13.5px;
+}
+
+.bar3 {
+  right: 0;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar1{
+  transform: translateX(40px);
+  background-color: transparent;
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar2{
+  transform: rotate(45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar3{
+  transform: rotate(-45deg);
+}
+
+.checkbox2:checked + label > .hamburger2 > .bar4{
+  transform: translateX(-40px);
+  background-color: transparent;
+}
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Extra Small devices (portrait tablets and large phones, 600px and low) */
+@media only screen and (max-width: 600px) {
+    .navbar-nav > li{
+        font-size: 15px;
+    }
+    .navbarBrandImage{
+        height: 60px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, Between 600px - 768px) */
+@media only screen and (max-width: 768px) and (min-width: 601px) {
+    .navbarBrandImage{
+        height: 60px;
+    }
+}
+
+/* Large device (portrait tablets and large phones, Between 992px - 1100px) */
+@media only screen and (max-width: 1100px) and (min-width: 992px) {
+    .navbar-nav > li{
+        font-size: 20px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
+
+  
+  /*--------------------------------------------------------------
+  # Canvas
+  --------------------------------------------------------------*/
+.canvasDiv{
+    /* overflow: hidden; */
+}
+canvas{
+    background-color: #000000;
+    /* overflow: hidden; */
+}
+  /*--------------------------------------------------------------
+  # ContentDiv
+  --------------------------------------------------------------*/
+
+  .contentDiv{
+    width: 100vw;
+    /* height: calc(100vh - 120px); */
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+
+  .contentDiv .carousel a .carousel-control-prev-icon,
+  .contentDiv .carousel a .carousel-control-next-icon
+  {
+    color: black;
+    
+  }
+  .contentDiv video{
+    position: relative;
+    width: 100%;
+    max-height: calc(100vh - 120px);
+    /* object-fit: fill;   */
+    object-fit: contain;
+  }
+
+/*# sourceMappingURL=main.css.map*/
