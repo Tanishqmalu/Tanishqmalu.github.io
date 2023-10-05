@@ -33,9 +33,9 @@ html{
     outline: none;
     /* font-family: 'Inter Variable', sans-serif; */
     /* font-weight: 900; */
-    /* border: 1px solid white; */
+    /* border: 1px dotted white; */
     
-                                        
+        /* overflow-x: hidden;                                */
     --glow-color: hsl(45, 95%, 25%);
   }
   *:focus{
@@ -679,11 +679,12 @@ body {
 
   }
   .buyButtons{
-    margin-top: 80px;
+    /* margin-top: 80px; */
     /* background-color: red; */
-    position: relative;
+    position: absolute;
+    width: 100%;
     z-index: 10;
-  
+    bottom: -10%;
     text-align: center;
 
   }
@@ -958,7 +959,7 @@ body {
     background: transparent url(assets/images/clouds3.png) repeat top center;   
     z-index: 4;    
     animation: move-clouds-back 20s linear infinite;  
-    opacity:0.7;
+    opacity:0.3;
   }
   .stars {  
     background: url(assets/images/stars2.png) repeat top center;    
@@ -984,6 +985,128 @@ body {
 # RewardSectionDiv
 --------------------------------------------------------------*/
 
+.circles{
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+  
+}
+
+.circles li{
+  background-color: red;
+  position: absolute;
+  z-index: 200;
+  /* top: 0; */
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0);
+  animation: animateit 25s linear infinite;
+  bottom: 0px; 
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+
+
+@keyframes animateit {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 0;
+      border-radius: 0;
+  }
+  50%{
+    opacity: 0.2;
+  }
+  100%{
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
+}
 .rewardSectionDiv{
   /* overflow-x: hidden; */
   /* border: 1px solid white; */
@@ -1014,6 +1137,22 @@ body {
   transition-timing-function: cubic-bezier (0.8, 0.2, 0.2, 0.8);
   transition: all 4s ease-out;
 }
+.rewardGradientDiv {
+  --size: 250px;
+  --speed: 50s;
+  position: absolute;
+  z-index: 200;
+  left: -10%;
+  top: -3%;
+  width: var(--size);
+  height: var(--size);
+  filter: blur(100px);
+  background-image: linear-gradient(rgba(235, 88, 55, 0.85) 20%,#c5951b 80%);
+  animation: rotateyeah 50s  infinite;
+  border-radius: 30% 40% 70% 30%/30% 30% 70% 70%;
+  transition-timing-function: cubic-bezier (0.8, 0.2, 0.2, 0.8);
+  transition: all 4s ease-out;
+}
 /* .rewardGradient:after {
   content: '';
   position: absolute;
@@ -1029,14 +1168,14 @@ body {
 @keyframes rotateyeah{
   0% {
     transform: rotate(0deg);
-    filter: blur(calc(var(--size) / 4.5));
+    /* filter: blur(calc(var(--size) / 4.5)); */
   }
   50%{
-    filter: blur(calc(var(--size) / 3.5));
+    /* filter: blur(calc(var(--size) / 3.5)); */
   }
   100% {
     transform: rotate(360deg);
-    filter: blur(calc(var(--size) / 4.5));
+    /* filter: blur(calc(var(--size) / 4.5)); */
   }
 }
 .bookingDiv .bookingHeading{
@@ -1085,8 +1224,9 @@ body {
 
 
 .rewardPointDiv{
-  padding-left: 100px;
-  padding-right: 100px;
+
+  /* padding-left: 100px;
+  padding-right: 100px; */
 }
 .rewardHeading{
   /* border: 1px solid white; */
@@ -1099,10 +1239,17 @@ body {
 
 .rewardPoints{
   /* border: 1px solid white; */
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 22px;
   text-align: justify;
   text-justify: inter-word;
   letter-spacing: 3px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+	border-top: 1px solid rgba(255,255,255,0.2);
+	border-left: 1px solid rgba(255,255,255,0.2);
+	background: rgba(255,255,255,0.1);
 }
 /* .rewardPoints li:after {
   content: "";
@@ -1536,8 +1683,8 @@ body {
 .BWESectionDiv{
   padding-top: 50px;
   width: 100%;
-  padding-left: 100px;
-  padding-right: 100px;
+  /* padding-left: 100px;
+  padding-right: 100px; */
   color: #fff;
   position: relative;
   background-color: #000;
@@ -1546,29 +1693,45 @@ body {
 
 .BWErow{
   /* border: 1px solid white; */
-  margin-top: 10px;
-  /* padding-bottom: 100px; */
-  height: calc((100vh - 100px) / 2);
-  text-align: center;
+  margin-bottom: calc((20vh - 30px)/2.2);
+  /* padding-bottom: calc(20vh - 20px)/2.2; */
+  height: calc((100vh - 100px) / 2.2);
+  /* text-align: center; */
   overflow: hidden;
+  
 
 }
 .Bimage img{
-  /* width: 100%; */
-  height: 30vh;
-  object-fit: cover;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  /* object-fit: contain; */
 }
 
 .Bheading{
-  font-size: 40px;
+  font-size: 60px;
   font-weight: 600;
-  text-align: center;
-  color: white;
+  /* color: white; */
+  background-image: linear-gradient(
+    75deg,
+    hsl(46, 92%, 47%) 0%,
+    hsl(19, 70%, 49%) 11%,
+    hsl(23, 70%, 49%) 22%,
+    hsl(27, 71%, 48%) 33%,
+    hsl(31 71% 48%) 44%,
+    hsl(35 71% 48%) 56%,
+    hsl(39 71% 48%) 67%,
+    hsl(43 72% 48%) 78%,
+    hsl(47 72% 48%) 89%,
+    hsl(51 73% 47%) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .Bpoints{
-  text-align: center;
-  font-size: 22px;
+  /* text-align: center; */
+  font-size: 30px;
 }
 
 /*--------------------------------------------------------------
@@ -1585,7 +1748,7 @@ body {
 
 
 .reviewHeading{
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   text-align: center;
   color: white;
@@ -1805,10 +1968,12 @@ background: linear-gradient(95deg, rgba(255,139,0,1) 0%, rgba(255,134,0,0.693714
 --------------------------------------------------------------*/
 
 .ModelGameDiv{
-  background-color: #111;
-   overflow: hidden;
   position: relative;
   width: 100%;
+  /* padding-left: 100px;
+  padding-right: 100px; */
+  background-color: #111;
+  overflow: hidden;
   height: calc(100vh - 10vh);
   align-items: center;
   justify-content: center;
@@ -1816,8 +1981,10 @@ background: linear-gradient(95deg, rgba(255,139,0,1) 0%, rgba(255,134,0,0.693714
 }
 .canvasmodelrow{
   pointer-events: none;
-position: absolute;
-z-index: 10;
+  position: relative;
+  height: calc(100vh - 100px);
+  width: 100%;
+  z-index: 10;
 }
 .galleryrow{
   
@@ -1880,16 +2047,16 @@ z-index: 10;
       50% calc(50% - var(--z))/100% calc(2*var(--z)) repeat-y;
 }
 
-.ModelGameDescription{
-  /* background-color: red;; */
+.GameDescription{
   position: absolute;
   width: 100%;
   z-index: 10;
   bottom: 10%;
   text-align: center;
 }
+
 .ModelGameHeading{
-  font-size: 25px;
+  font-size: 50px;
   font-weight: 600;
   color: white;
   text-shadow: 1px 1px 1px #111;
@@ -1916,11 +2083,9 @@ z-index: 10;
 }
 
 .accessoriesButton{ 
-
-  width: 15%;
+  width: 100%;
   position: absolute;
   top: 50%;
-  right: 3%;
   transform: translate(0,-50%);
   z-index: 100;
   
@@ -1928,26 +2093,24 @@ z-index: 10;
 .accessoriesButton .row{
   position: relative;
   margin-bottom: 20px;
-  
 }
 
 .accessoriesButton .accessoryDiv{
   position: relative;
-  text-align: center;
 }
 
 .accessoriesButton button{
-  width: 80%;
+  width: 100%;
   height: 80px;
 }
 
 .animationButton{
-  width: 7.5%;
   position: absolute;
-  top: 50%;
-  left: 3%;
-  transform: translate(0,-50%);
   z-index: 100;
+  width: 100%;
+  top: 50%;
+  transform: translate(0,-50%);
+  
 }
 .animationButton .row{
   position: relative;
@@ -1957,11 +2120,10 @@ z-index: 10;
 
 .animationButton .accessoryDiv{
   position: relative;
-  text-align: center;
 }
 
 .animationButton button{
-  width: 80%;
+  width: 100%;
   height: 80px;
 }
 canvas .webgl{
@@ -2414,6 +2576,7 @@ path.two {
 
 /* Team Huddle Div */
 .TeamHuddleDiv{
+  position: relative;
   height: calc(100vh - 100px);
   background-image: url(assets/images/team_dimension.png);
   background-repeat: no-repeat;
@@ -2426,12 +2589,13 @@ path.two {
 .NFTAvatarDiv{
   position: relative;
   z-index: 0;
+  width: 100%;
   height: calc(100vh - 100px);
   overflow: hidden; 
   color: white;  
   background-color: #000;
 }
-.NFTAvatarHeadlineContainer{
+.NFTAvatarHeading{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -2440,7 +2604,15 @@ path.two {
   justify-content: center;
   pointer-events: none;
 }
+.NFTAvatarHeadlineContainer{
+  
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  pointer-events: none;
+}
  #NFTAvatarCanvas {
+  /* background-color: red; */
   position: absolute;
   z-index: 2;
   top:0;
@@ -2460,7 +2632,7 @@ path.two {
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
-  line-height: 0.8;
+  line-height: 1.2;
 }
 
 #text-behind {
@@ -2469,9 +2641,9 @@ path.two {
 }
 
 #text-behind-blur {
-  color: white;
-  filter: blur(7.5px);
-  -webkit-filter: blur(7.5px);
+  /* color: white; */
+  /* filter: blur(7.5px); */
+  /* -webkit-filter: blur(7.5px); */
   z-index: 0;
 }
 
@@ -2488,11 +2660,9 @@ path.two {
 .NFTAvatarDescription{
   /* background-color: red; */
   position: absolute;
-  width: 80%;
   bottom: 10%;
-  left:50%;
   font-size: 25px;
-  transform: translate(-50%,0);
+
   display: flex;
 
   text-align: justify;
@@ -2504,7 +2674,13 @@ path.two {
   transition: all 0.5s ease-out;
 } */
 
-
+#matrix{
+  position: absolute;
+  z-index: 0;
+  opacity: 0.2;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
 /*!
  * Bootstrap Icons v1.11.1 (https://icons.getbootstrap.com/)
  * Copyright 2019-2023 The Bootstrap Authors
